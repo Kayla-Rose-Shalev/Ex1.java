@@ -10,6 +10,9 @@
  * “b2”, “0b1”, “123b”, “1234b11”, “3b3”, “-3b5”, “3 b4”, “GbG”, "", null,
  * You should implement the following static functions:
  */
+
+import java.util.Scanner;
+
 public class Ex1 {
         /**
          * Convert the given number (num) to a decimal representation (as int).
@@ -19,9 +22,12 @@ public class Ex1 {
          */
         public static int number2Int(String num) {
             int ans = -1;
-            // add your code here
+            Scanner scan = new Scanner(System.in); // Using scanner, choose an n according to the given conditions:
+            System.out.println(" Enter a string as number #1 (or + " + " quit to end the program");
+            int n = scan.nextInt();
 
-            ////////////////////
+
+
             return ans;
         }
         /**
