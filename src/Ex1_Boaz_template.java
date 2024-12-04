@@ -13,13 +13,15 @@
 
 import java.util.Scanner;
 
-public class Ex1 {
-        /**
-         * Convert the given number (num) to a decimal representation (as int).
-         * If the given number is not in a valid format it returns -1.
-         * @param num a String representing a number in bases [2,16]
-         * @return
-         */
+public class Ex1_Boaz_template {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (true){
+            String n = sc.nextLine();
+            System.out.println(isNumber(n));
+        }
+    }
+
         public static int number2Int(String num) {
             int ans = -1;
             Scanner scan = new Scanner(System.in); // Using scanner, choose an n according to the given conditions:
@@ -30,16 +32,13 @@ public class Ex1 {
 
             return ans;
         }
-        /**
-         * This static function checks if the given String (g) is in a valid "number" format.
-         * @param a a String representing a number
-         * @return true if the given String is in a number format
-         */
+
         public static boolean isNumber(String a) {
             boolean ans = true;
-            // add your code here
-
-            ////////////////////
+            for (int i = 0; i < a.length(); i++) {
+                if (Character.isDigit(a.charAt(i)) == false)
+                    return false;
+            }
             return ans;
         }
 
