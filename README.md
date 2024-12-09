@@ -1,25 +1,25 @@
 In this assignment we are required to design a number formatting converter and calculator.
 
-Firstly, this will be done by asking the user to input a number from base 2 to 16, when 10-16 are represented correspondently by A-G, using the following format: <number><b><base.
+Firstly, this will be done by prompting the user to input a number from base 2 to 16, when 10-16 are represented correspondingly by A-G, using the following format: <number><b><base.
 
 for example, valid numbers include: 1011b2, 135bA, 1937, 012b5, 123bG. EFbG and so on. 
     >In the case that the number chosen is not valid, for example:
     “b2”, “0b1”, “123b”, “1234b11”, “3b3”, “-3b5”, “3 b4”, “GbG” ;
-    the output will present an error and start over the code prompting the user for a new first number:
+    the output will present an error and start over the code, prompting the user for a new first number:
     
      ERR: num1 is in the wrong format! (users input)
 
      Ex1 class solution:
      Enter a string as number#1 (or "quit" to end the program): 
 
-List of conditions that apply for a number to be valid:
+List of conditions that apply in order for a number to be valid:
 - If made up of only digits and no other characters (meaning it is a decimal number).
 - in any other case, it must fit the format of <number><b><base from [2,16]>. (in other words, it must contain a number, than the lower-case letter b, than a number from 2-16.)
-- in the <number> part, capital lettters A-G are permitted since they represent the numbers 10 through 16.
+- in the <number> part, capital letters A-G are permitted since they represent the numbers 10 through 16.
 
 Once a valid first number is entered, the output will present that it is a true number and it will also present its decimal value:
 
-    num1= (users input) is number: true , value: (converted decimal value of users input)
+    num1= (users input) is number: true ,    value: (converted decimal value of users input)
     
 Afterwards, the output will ask the user to choose a second number in a similar fashion to the first one:
 
@@ -42,7 +42,7 @@ Once a valid base is chosen, the output will present the following 3 solutions:
 
     first chosen number + second chosen number = result in chosen base by user
     first chosen number * second chosen number = result in chosen base by user
-    Max number over [first chosen number, second chosen number, addition result in chosen base bu usur, multiplication result in chosen base buyuser]
+    Max number over [first chosen number, second chosen number, addition result in chosen base bu user, multiplication result in chosen base by user]
        
 
    

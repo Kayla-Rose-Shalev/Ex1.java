@@ -22,6 +22,19 @@ public class Ex1_Boaz_template {
         }
     }
 
+
+    public static String numSection(String numberPart) {
+        return numberPart.substring(0, numberPart.indexOf('b'));
+    }
+
+    public static String baseSection(String basePart) {
+        return basePart.substring(basePart.indexOf('b') + 1 , basePart.indexOf(basePart.length()-1));
+
+    public static Integer digitsOnly (int = )
+
+
+
+    }
         public static int number2Int(String num) {
             int ans = -1;
             Scanner scan = new Scanner(System.in); // Using scanner, choose an n according to the given conditions:
