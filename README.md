@@ -43,6 +43,6 @@ Once a valid base is chosen, the output will present the following 3 solutions:
     first chosen number + second chosen number = result in chosen base by user
     first chosen number * second chosen number = result in chosen base by user
     Max number over [first chosen number, second chosen number, addition result in chosen base bu usur, multiplication result in chosen base buyuser]
-       
+       vi
 
    
