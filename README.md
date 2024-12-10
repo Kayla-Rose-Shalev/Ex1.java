@@ -40,9 +40,9 @@ Once a valid base is chosen, the output will present the following 3 solutions:
 2. The multiplication of the 2 chosen numbers, where the result is presented in the chosen base.
 3. The greatest number amongst the four following: 1) chosen number #1, 2) chosen number #2, 3) addition result in chosen base, 4) multiplication result in chosen base
 
-    first chosen number + second chosen number = result in chosen base by user
-    first chosen number * second chosen number = result in chosen base by user
-    Max number over [first chosen number, second chosen number, addition result in chosen base bu usur, multiplication result in chosen base buyuser]
-       vi
+        first chosen number + second chosen number = result in chosen base by user
+        first chosen number * second chosen number = result in chosen base by user
+        Max number over [first chosen number, second chosen number, addition result in chosen base by user, multiplication result in chosen base by user]
+       
 
    
