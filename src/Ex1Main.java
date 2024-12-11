@@ -8,61 +8,66 @@ public class Ex1Main {
             // Prompt user for the first number
             System.out.print("Enter a string as number#1 (or \"quit\" to end the program): ");
             String num1 = scanner.nextLine();
-            if (num1.equalsIgnoreCase("quit")) break;
 
-            // In the case where the input is in an invalid format
-            if (!Ex1.isNumber(num1)) {
-                System.out.println("ERR: num1 is in the wrong format! (" + num1 + ")");
-                continue;
+            // In the case where the user wants to quit:
+            if (num1.equalsIgnoreCase("quit")) {
+                System.out.println("quitting now...");
+                break;
             }
 
-            int num1Value = Ex1.number2Int(num1);
-            System.out.println("num1 = " + num1 + " is number: true, value: " + num1Value);
+            // In the case where the input for num1 is in an invalid format, print error:
+            if (!Ex1.isNumber(num1)) {
+                System.out.println("ERR: num1 is in the wrong format! (" + num1 + ")");
+                continue; // Restart loop to ask for new input
+            }
+
+            // Convert num1 to decimal value using "number2Int" function:
+            int num1DecimalValue = Ex1.number2Int(num1);
+            System.out.println("num1 = " + num1 + " is number: true, value: " + num1DecimalValue);
 
             // Prompt user for the second number
             System.out.print("Enter a string as number#2 (or \"quit\" to end the program): ");
             String num2 = scanner.nextLine();
-            if (num2.equalsIgnoreCase("quit")) break;
+            if (num2.equalsIgnoreCase("quit")) {
+                System.out.println("quitting now...");
+                break;
+            }
 
-            // Validate the second number
+            // In the case where the input for num2 is in an invalid format, print error:
             if (!Ex1.isNumber(num2)) {
                 System.out.println("ERR: num2 is in the wrong format! (" + num2 + ")");
-                continue;
+                continue; // Restart loop to ask for new input
             }
 
-            int num2Value = Ex1.number2Int(num2);
-            System.out.println("num2 = " + num2 + " is number: true, value: " + num2Value);
+            // Convert num2 to decimal value using "number2Int" function:
+            int num2DecimalValue = Ex1.number2Int(num2);
+            System.out.println("num2 = " + num2 + " is number: true, value: " + num2DecimalValue);
 
-            // Prompt for the base
+            // Prompt user for a base from 2 to 16
             System.out.print("Enter a base for output: (a number [2,16]): ");
             int base;
-            try {
-                base = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("ERR: wrong base, should be [2,16], got invalid input");
-                continue;
-            }
-
+            base = Integer.parseInt((scanner.nextLine()));
             if (base < 2 || base > 16) {
                 System.out.println("ERR: wrong base, should be [2,16], got " + base);
-                continue;
+                continue; // Restart loop to ask for new input
             }
 
-            // Perform calculations
-            int additionResult = num1Value + num2Value;
-            int multiplicationResult = num1Value * num2Value;
+            // Perform required calculations:
+            int additionResult = num1DecimalValue + num2DecimalValue;
+            int multiplicationResult = num1DecimalValue * num2DecimalValue;
 
-            String additionBaseResult = Ex1.int2Number(additionResult, base);
-            String multiplicationBaseResult = Ex1.int2Number(multiplicationResult, base);
+            String addition4ChosenBaseResult = Ex1.int2Number(additionResult, base);
+            String multiplication4ChosenBaseResult = Ex1.int2Number(multiplicationResult, base);
 
-            System.out.println(num1 + " + " + num2 + " = " + additionBaseResult + " (base " + base + ")");
-            System.out.println(num1 + " * " + num2 + " = " + multiplicationBaseResult + " (base " + base + ")");
+            // Display results in chosen base:
+            System.out.println(num1 + " + " + num2 + " = " + addition4ChosenBaseResult + " (base " + base + ")");
+            System.out.println(num1 + " * " + num2 + " = " + multiplication4ChosenBaseResult + " (base " + base + ")");
 
-            // Determine the max value
-            String[] candidates = {num1, num2, additionBaseResult, multiplicationBaseResult};
-            int maxIndex = Ex1.maxIndex(candidates);
+            // Determine the max value:
+            String[] numbers = {num1, num2, addition4ChosenBaseResult, multiplication4ChosenBaseResult};
+            int maxIndex = Ex1.maxIndex(numbers);
 
-            System.out.println("Max number over [num1, num2, addition, multiplication]: " + candidates[maxIndex]);
+            System.out.println("Max number over: " + num1 + "," + num2 + "," + addition4ChosenBaseResult + "," + multiplication4ChosenBaseResult +": "  + numbers[maxIndex]);
         }
 
         scanner.close();
