@@ -1,6 +1,6 @@
 In this assignment we are required to design a number formatting converter and calculator.
 
-Firstly, this will be done by asking the user to input a number from base 2 to 16, when 10-16 are represented correspondently by A-G, using the following format: <number><b><base.
+Firstly, this will be done by asking the user to input a number from base 2 to 16, when 10-16 are represented correspondingly by A-G, using the following format: <number><b><base.
 
 for example, valid numbers include: 1011b2, 135bA, 1937, 012b5, 123bG. EFbG and so on. 
     >In the case that the number chosen is not valid, for example:
@@ -14,7 +14,7 @@ for example, valid numbers include: 1011b2, 135bA, 1937, 012b5, 123bG. EFbG and 
 
 List of conditions that apply for a number to be valid:
 - If made up of only digits and no other characters (meaning it is a decimal number).
-- in any other case, it must fit the format of <number><b><base from [2,16]>. (in other words, it must contain a number, than the lower-case letter b, than a number from 2-16.)
+- in any other case, it must fit the format of <number><b><base from [2,16]>. (in other words, it must contain a number, than the lower-case letter b, than a number from 2-9, or a letter from A-G.)
 - in the <number> part, capital lettters A-G are permitted since they represent the numbers 10 through 16.
 
 Once a valid first number is entered, the output will present that it is a true number and it will also present its decimal value:

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Ex1Test {
     @Test
-    void Number2IntTest() {
+    void computeNumberTest() {
         String s2 = "1011b2";
         int v = Ex1.number2Int(s2);
         assertEquals(v, 11);
@@ -17,7 +17,6 @@ public class Ex1Test {
         String s10 = "1011bA";
         v = Ex1.number2Int(s10);
         s2 = Ex1.int2Number(v, 2);
-
         int v2 = Ex1.number2Int(s2);
         assertEquals(v, v2);
         assertTrue(Ex1.equals(s10, s2));
@@ -77,4 +76,17 @@ public class Ex1Test {
         assertTrue(Ex1.equals("0b2", "0b10"));   // Zero in any base
 
     }
+
+    @Test
+    void number2int() {
+        String a = "1011b2";
+        int v = Ex1.number2Int(a);
+        assertEquals(v, 11);
+
+    }
+
 }
+
+
+
+
